@@ -13,14 +13,20 @@ class BinaryTree:
         self.__data = data
 
     def add_leftchild(self, tree):
-        if not isinstance(tree.data, type(self.data)) and (self.data is not None):
+        if tree.data is None:
+            self.left = tree
+
+        elif not isinstance(tree.data, type(self.data)) and (self.data is not None):
             raise TypeError("TypeError: Type mismatch between " + type(self.data).__name__ + " and " +
                             type(tree.data).__name__)
 
         self.left = tree
 
     def add_rightchild(self, tree):
-        if not isinstance(tree.data, type(self.data)) and (self.data is not None):
+        if tree.data is None:
+            self.left = tree
+
+        elif not isinstance(tree.data, type(self.data)) and (self.data is not None):
             raise TypeError("TypeError: Type mismatch between " + type(self.data).__name__ + " and " +
                             type(tree.data).__name__)
 
@@ -38,13 +44,15 @@ class BinaryTree:
 
 
 if __name__ == "__main__":
+    print(isinstance(None, type("s")))
+
     t1 = BinaryTree(1)
     t2 = BinaryTree(2)
     t3 = BinaryTree(3)
     t4 = BinaryTree(4)
     t5 = BinaryTree(5)
     t6 = BinaryTree(6)
-    t7 = BinaryTree(7)
+    t7 = BinaryTree(None)
 
     t2.add_leftchild(t4)
     t2.add_rightchild(t5)
