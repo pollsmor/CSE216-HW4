@@ -6,7 +6,7 @@ public class Driver {
         BinaryTree<String> t4 = new BinaryTree<>("4");
         BinaryTree<String> t5 = new BinaryTree<>("5");
         BinaryTree<String> t6 = new BinaryTree<>("6");
-        BinaryTree<String> t7 = new BinaryTree<>("7");
+        BinaryTree<String> t7 = new BinaryTree<>(null);
 
         t2.addLeftChild(t4);
         t2.addRightChild(t5);

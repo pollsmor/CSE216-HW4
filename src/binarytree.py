@@ -33,8 +33,7 @@ class BinaryTree:
         self.right = tree
 
     def __iter__(self):
-        if self.data is not None:
-            yield self.data
+        yield self.data
         if self.left is not None:
             for d in self.left.__iter__():
                 yield d
@@ -43,22 +42,20 @@ class BinaryTree:
                 yield d
 
 
-if __name__ == "__main__":
-    print(isinstance(None, type("s")))
-
-    t1 = BinaryTree(1)
-    t2 = BinaryTree(2)
-    t3 = BinaryTree(3)
-    t4 = BinaryTree(4)
-    t5 = BinaryTree(5)
-    t6 = BinaryTree(6)
-    t7 = BinaryTree(None)
-
-    t2.add_leftchild(t4)
-    t2.add_rightchild(t5)
-    t3.add_leftchild(t6)
-    t3.add_rightchild(t7)
-    t1.add_leftchild(t2)
-    t1.add_rightchild(t3)
-
-    print(list(iter(t1)))
+# if __name__ == "__main__":
+#     t1 = BinaryTree(1)
+#     t2 = BinaryTree(2)
+#     t3 = BinaryTree(3)
+#     t4 = BinaryTree(4)
+#     t5 = BinaryTree(5)
+#     t6 = BinaryTree(6)
+#     t7 = BinaryTree(None)
+#
+#     t2.add_leftchild(t4)
+#     t2.add_rightchild(t5)
+#     t3.add_leftchild(t6)
+#     t3.add_rightchild(t7)
+#     t1.add_leftchild(t2)
+#     t1.add_rightchild(t3)
+#
+#     print(list(iter(t1)))
